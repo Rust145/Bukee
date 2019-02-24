@@ -8,6 +8,8 @@ h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
+$light-color: #FFF;
+$accent-color: #65e49c;
 
 code {
     background: rgba(#000, 0.2);
@@ -17,30 +19,145 @@ code {
 
 body {
     font-family: 'Roboto Slab', serif;
- 
 }
 .page-main {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    color: $light-color;
+    padding-bottom: 160px;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 39px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 161px;
     &__logo {
         display: block;
         width: 137px;
-        height: 29px;
+        height: 32px;
         background-image: url(../img/logo.svg);
+        background-repeat: no-repeat;
     }
     &-list {
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
+        font-family: 'Open Sans', serif;
         &__item {
-            margin-left: 21px;
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link {
+            color: $light-color;
+            text-decoration: none;
+            letter-spacing: 0.5px;
         }
     }
-    
 }
+.wrap {
+    max-width: 1165px;
+    margin: 0 auto;
+}
+.block-text {
+    flex-basis: calc(93% - 500px);
+    &__name {
+        font-family: 'Open Sans', serif;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+        margin-bottom: 30px;
+    }
+    &__tittle {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin-bottom: 40px;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+            margin-top: 10px;
+            letter-spacing: 0.9px;
+        }
+    }
+    &__description {
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        letter-spacing: 0.7px;
+    }
+    &__btn {
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
+        max-width: 250px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+        margin-top: 47px;
+        margin-bottom: 18px;
+        padding: 15px 0;
+        letter-spacing: 0.7px;
+    }
+    small {
+        font-family: 'Open Sans', serif;
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+    }
+}
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    &-demo {
+        display: block;
+        width: 445px;
+        height: 640px;
+        background-image: url(../img/book1.png);
+        background-repeat: no-repeat;
+        flex-basis: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.accent-btn {
+//    display: block;
+//        background-color: $accent-color;
+//        color: $light-color;
+//        text-decoration: none;
+//        max-width: 250px;
+//        border-radius: 3px;
+//        text-align: center;
+//}
+
