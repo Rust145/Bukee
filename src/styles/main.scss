@@ -17,8 +17,13 @@ code {
     margin-right: 5px;
 }
 
+
 body {
     font-family: 'Roboto Slab', serif;
+}
+.wrap {
+    max-width: 1165px;
+    margin: 0 auto;
 }
 .page-main {
     background-image: url(../img/bg.png);
@@ -66,29 +71,28 @@ body {
         }
     }
 }
-.wrap {
-    max-width: 1165px;
-    margin: 0 auto;
-}
 .block-text {
     flex-basis: calc(93% - 500px);
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
-        letter-spacing: 0.8px;
+        letter-spacing: 1px;
         margin-bottom: 30px;
+    }
+    &__name-top {
+        margin-top: 10px;
     }
     &__tittle {
         font-size: 48px;
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.7px;
         margin-bottom: 40px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
             margin-top: 10px;
-            letter-spacing: 0.9px;
+            letter-spacing: 0.95px;
         }
     }
     &__description {
@@ -96,7 +100,7 @@ body {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
     }
     &__btn {
         display: block;
@@ -131,8 +135,25 @@ body {
         flex-basis: 500px;
     }
 }
-
-
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 43px;
+        margin-right: 38px;
+    }
+}
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+.page {
+    padding-top: 167px;
+}
 
 
 
