@@ -27,6 +27,8 @@ body {
 .wrap {
     max-width: 1165px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .page-main {
     background-image: url(../img/bg.png);
@@ -39,10 +41,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 39px;
     max-width: 1170px;
     margin: 0 auto;
-    padding-bottom: 161px;
+    padding: 39px 15px 161px 15px;
+    @media(max-width: 1020px) {
+        padding: 39px 15px 100px 15px;
+    }
+    @media(max-width: 920px) {
+        flex-direction: column;
+    }
     &__logo {
         display: block;
         width: 137px;
@@ -84,19 +91,24 @@ body {
         font-family: 'Open Sans', serif;
         font-size: 18px;
         letter-spacing: 1px;
-        margin-bottom: 32px;
+        margin-bottom: 28px;
     }
     &__tittle {
         font-size: 48px;
         font-weight: 700;
         letter-spacing: 1.7px;
-        margin-bottom: 38px;
+        margin-bottom: 41px;
+        line-height: 50px;
+        @media (max-width: 500px) {
+            font-size: 30px;
+            }
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
-            margin-top: 24px;
+            margin-top: 12px;
             letter-spacing: 0.9px;
+            line-height: 20px;
         }
     }
     &__description {
@@ -115,11 +127,14 @@ body {
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
-        margin-top: 48px;
-        margin-bottom: 18px;
+        margin-top: 46px;
+        margin-bottom: 15px;
         padding: 13px 0;
         letter-spacing: 0.7px;
         box-shadow: 0 -2px #59ba88 inset;
+        @media(max-width: 1020px) {
+            margin: 46px auto 15px;
+        }
     }
     small {
         font-family: 'Open Sans', serif;
@@ -130,11 +145,15 @@ body {
 }
 .block-text__name_top {
         margin-top: 5px;
-        margin-bottom: 34px;
+        margin-bottom: 21px;
     }
 .block-book {
     display: flex;
     justify-content: flex-start;
+    @media(max-width: 1020px) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     &-demo {
         display: block;
         width: 445px;
@@ -143,6 +162,10 @@ body {
         background-repeat: no-repeat;
         flex-basis: 500px;
         position: relative;
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+            margin: 37px auto 0;
+        }
         &__title {
             font-size: 36px;
             font-weight: bold;
@@ -174,10 +197,18 @@ body {
 }
 .block-ava {
     position: relative;
+    @media(max-width: 630px) {
+        max-width: 317px;
+        margin: 0 auto;
+    }
     &__svg {
         position: absolute;
         z-index: -1;
         right: 0;
+        @media(max-width: 1020px) {
+            width: 300px;
+            height: 410px;
+    }
     }
     &__svg--left {
         right: inherit;
@@ -187,19 +218,29 @@ body {
     &__img {
         margin-top: 39px;
         margin-right: 41px;
+        @media(max-width: 1020px) {
+            width: 300px;
+    }
     }
     &__img--left {
         margin-top: 47px;
         margin-left: 51px;
         margin-right: 0;
+        @media(max-width: 500px) {
+            margin-left: -11px;
+        }
     }
 }
 .block-author {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 650px) {
+        flex-direction: column-reverse;
+    }
     .block-text {
-        &__tittle span {
-            margin-top: 24px;
+        @media(max-width: 1020px) {
+            flex-basis: calc(93% - 300px);
+            margin-left: 10px;
         }
         &__btn {
             padding: 12px 0;
@@ -247,6 +288,10 @@ body {
     justify-content: space-around;
     margin-top: 190px;
     margin-bottom: 140px;
+    @media (max-width: 750px) {
+        flex-direction: column;
+        margin: 30px;
+    }
     p {
         font-family: 'Open Sans', serif;
         text-align: center;
@@ -259,14 +304,58 @@ body {
             color: $accent-color;
             font-weight: 100;
             margin-bottom: 13px;
+            @media (max-width: 450px) {
+                font-size: 50px;
+                margin-bottom: -20px;
+            }
         }
     }
 }
+
 .page {
     padding-top: 167px;
+    @media(max-width: 1020px) {
+        padding-top: 80px;
+    }
     &_grey {
         background-color: $bg-light-color;
         padding-bottom: 262px;
+        @media(max-width: 1020px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__svg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+.page-grey__name {
+    @media(max-width: 320px) {
+        line-height: 50px;
+    }
+}
+.page-svg {
+    position: relative;
+    height: 685px;
+    background-color: $bg-dark-color;
+    width: 100%;
+    @media(max-width: 1300px) {
+        background-color: $bg-dark-color;
+        width: 100%;
+        height: 500px;
+        padding: 0
+    }
+    @media(max-width: 750px) {
+        background-color: $bg-dark-color;
+        width: 100%;
+        height: 600px;
+        padding: 0
+    }
+    @media(max-width: 320px) {
+        height: 700px;
     }
 }
 .box-name {
@@ -275,6 +364,9 @@ body {
     letter-spacing: 1.7px;
     margin-left: 9px;
     margin-top: 1px;
+    @media(max-width: 500px) {
+        font-size: 30px;
+    }
 }
 .subtitle {
     color: $accent-color;
@@ -283,6 +375,10 @@ body {
     text-align: center;
     letter-spacing: 0.9px;
     margin-left: 5px;
+    @media(max-width: 500px) {
+        padding-top: 10px;
+        font-size: 15px;
+    }
 }
 h3 {
     font-size: 24px;
@@ -315,32 +411,48 @@ h3 {
 .block-about {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1020px) {
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 750px;
+    }
     h3 {
         margin-bottom: 18px;
+        @media(max-width: 1020px) {
+            margin-top: 30px;
+        }
     }
     &__desc {
         font-family: 'Open Sans', serif;
         letter-spacing: 0.71px;
     }
     &-text {
-        flex-basis: 41%;
+        flex-basis: calc(100% - 699px);
         margin-top: 5px;
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+        }
     }
     &-table {
-        flex-basis: 50%;
-        z-index: 0;
+        flex-basis: 595px;
+        margin-top: 4px;
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+        }
         h3 {
-            margin-top: 82px;
             margin-left: 15px
         }
         &__list {
-            margin: 0;
             padding: 0;
             counter-reset: list;
             column-count: 2;
             margin-top: 26px;
             letter-spacing: 0.6px;
             margin-bottom: 40px;
+            column-gap: 15px;
+            @media(max-width: 635px) {
+                column-count: 1;
+            }
             &>li {
                 position: relative;
                 padding-left: 52px;
@@ -357,11 +469,24 @@ h3 {
                     font-family: 'Open Sans', serif;
                     font-size: 15px;
                     padding: 2px 7px;
-                    color: $light-color;;
+                    color: $light-color;
                     top: 0px;
                     left: 14px;
                     line-height: 18px;
                 }
+            }
+        }
+        &__list_next {
+            counter-reset: list 10;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100px;
+                height: 2px;
+                background-color: #5fc9b3;
+                display: block;
+                top: -20px;
             }
         }
         &__btn {
@@ -373,15 +498,31 @@ h3 {
             font-size: 18px;
             border-radius: 5px;
             box-shadow: 0 -2px #b2f1be inset;
+            border: none;
+            &:focus {
+                outline: none;
+            }
         }
     }
 }
+.page_white {
+    @media(max-width: 1020px) {
+        padding-top: 50px;
+    }
+}
 .page-white {
+    @media(max-width: 1020px) {
+        padding-top: 50px;
+    }
     .three-books {
         display: flex;
         justify-content: space-between;
         margin-top: 84px;
         margin-bottom: -103px;
+        @media(max-width: 1020px) {
+            flex-direction: column;
+            margin-top: 20px;
+        }
         .books {
             background-image: url(../img/book%20img.svg);
             background-repeat: no-repeat;
@@ -389,6 +530,9 @@ h3 {
             height: 470px;
             display: block;
             position: relative;
+            @media(max-width: 1020px) {
+                margin: 0 auto;
+            }
             &-signature {
                 font-size: 24px;
                 font-weight: bold;
@@ -398,6 +542,9 @@ h3 {
                 left: 70px;
                 letter-spacing: 1.1px;
                 color: $light-color;
+                @media(max-width: 400px) {
+                    top: 0px;
+                }
                 span {
                     font-family: 'Open Sans', serif;
                     font-size: 12px;
@@ -421,9 +568,22 @@ h3 {
         }
         .books-left {
             margin-left: 50px;
+            @media(max-width: 1020px) {
+                margin-left: 0;
+                margin: 0 auto;
+            }
         }
         .books-right {
             margin-right: 47px;
+            @media(max-width: 1020px) {
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__name {
+        @media(max-width: 320px) {
+            line-height: 50px;
         }
     }
     .three-text {
@@ -431,6 +591,9 @@ h3 {
         justify-content: space-between;
         text-align: center;
         margin-bottom: 58px;
+        @media(max-width: 1020px) {
+            display: none;
+        }
         .three-books-text {
             width: 315px;
             &__name-books {
@@ -469,17 +632,37 @@ h3 {
         display: block;
         width: 222px;
         box-shadow: 0 -2px #b2f1be inset;
+        margin-bottom: 148px;
+        @media(max-width: 1020px) {
+            margin: 20px auto 80px;
+        }
     }
 }
 .page_grey1 {
     background-color: #f5f6fa;
-    padding-bottom: 161px;
+    padding-bottom: 10px;
     margin-top: 130px;
+    @media(max-width: 1020px) {
+        padding-top: 50px;
+    }
 }
 .block-blog {
     margin-top: 84px;
+    @media(max-width: 900px) {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 40px auto 0;
+
+    }
+    &-item {
+        flex-basis: 32%;
+    }
     &-item:not(:first-child) {
         margin-left: 32px;
+        @media(max-width: 900px) {
+        flex-direction: column;
+            margin-left: 0;
+        }
     }
     h4 {
         font-size: 18px;
@@ -487,13 +670,13 @@ h3 {
         margin-bottom: 3px;
     }
     &-img {
-        width: 369px;
+        width: 100%;
         height: 224px;
         overflow: hidden;
         position: relative;
         margin-bottom: 16px;
         img{
-            width: 369px;
+            width: 100%;
             height: 224px;
             position: absolute;
             left: 50%;
@@ -507,6 +690,7 @@ h3 {
         display: flex;
         letter-spacing: 1px;
         margin-bottom: 11px;
+        flex-wrap: wrap;
         a {
             color: $accent-color;
             text-decoration: none;
@@ -517,6 +701,10 @@ h3 {
         font-family: 'Open Sans', serif;
         letter-spacing: 0.7px;
         margin-bottom: 84px;
+        @media(max-width: 900px) {
+            margin-bottom: 20px;
+        }
+
     }
     display: flex;
     justify-content: space-between;
@@ -524,19 +712,34 @@ h3 {
 .accent-btn {
     padding: 13px 22px;
     margin-left: 453px;
+    @media(max-width: 1020px) {
+        margin: 0 auto 50px;
+    }
 }
 .block-letter {
     display: flex;
     justify-content: space-between;
     padding-bottom: 155px;
+    @media(max-width: 1020px) {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 100px;
+    }
     &-item {
         flex-basis: 49%;
+        @media(max-width: 1020px) {
+            margin-bottom: 20px;
+            flex-basis: 100%;
+        }
     }
     &__tittle {
         font-size: 48px;
         font-weight: bold;
         letter-spacing: 1.9px;
         margin-bottom: 23px;
+        @media(max-width: 1020px) {
+            line-height: 50px;
+        }
     }
     &__text {
         font-family: "Open Sans", serif;
@@ -545,7 +748,7 @@ h3 {
     }
     &__input {
         width: 100%;
-        background-color: #44444f;
+        background-color: $bg-dark-color;
         border: none;
         color: #9191b5;
         padding: 15px 25px;
@@ -554,6 +757,9 @@ h3 {
         letter-spacing: 0.65px;
         margin-top: -7px;
         margin-left: 7px;
+        @media(max-width: 1020px) {
+            max-width: 500px;
+        }
         &:focus {
             outline: none;
         }
@@ -576,6 +782,10 @@ h3 {
         display: block;
         width: 100%;
         box-shadow: 0 -2px #b2f1be inset;
+        @media(max-width: 1020px) {
+            max-width: 500px;
+            margin: 21px auto 0;
+        }
         &:focus {
             outline: none;
         }
@@ -585,10 +795,16 @@ h3 {
     background-color: $bg-dark-color;
     color: $gray-color;
     padding: 168px;
+    @media(max-width: 1020px) {
+        padding: 100px 0;
+    }
 }
 .block-footer {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 450px) {
+        flex-direction: column;
+    }
     &>div {
         &>p {
         letter-spacing: 0.55px;
@@ -600,6 +816,9 @@ h3 {
     }
     .block-footer2 {
         margin-left: -57px;
+        @media(max-width: 1500px) {
+            margin-left: 0;
+        }
         .list-letter {
         letter-spacing: 0.5px;
         margin-bottom: 4px;
@@ -644,6 +863,7 @@ h3 {
 }
 .block-carousel {
     text-align: center;
+    padding-top: 68px;
     &-ava {
         position: relative;
         width: 152px;

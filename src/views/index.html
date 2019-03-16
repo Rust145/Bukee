@@ -115,7 +115,19 @@
                             <li>Consectetur adipisicing elit</li>
                             <li>Labore et dolore magna</li>
                         </ol>
-                        <a href="" class="block-about-table__btn">More</a>
+                        <ol class="block-about-table__list block-about-table__list_next" style="display: none" id="nextContentsList">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                        </ol>
+                        <button id="nextContents" href="" class="block-about-table__btn">More</button>
                     </div>
                 </div>
             </div>
@@ -158,7 +170,7 @@
                 <a href="#" class="page-white__btn">Browse all books</a>
             </div>
         </div>
-        <div class="page">
+        <div class="page page-svg">
             <div class="wrap">
                 <div class="block-carousel">
                     <div>
@@ -190,6 +202,7 @@
                     </div>
                 </div>
             </div>
+<!--            <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>-->
         </div>
         <div class="page page_white">
             <div class="wrap">
@@ -232,7 +245,7 @@
                         <div class="block-blog-img"><img src="../img/blog1.jpg" alt=""></div>
                         <h4>Importance of light in photography</h4>
                         <div class="block-blog-info">
-                            <p>By<a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
+                            <p>By <a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
                         </div>
                         <p class="block-blog__desc">Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
                     </div>
@@ -240,7 +253,7 @@
                         <div class="block-blog-img"><img src="../img/blog2.jpg" alt=""></div>
                         <h4>The tools you need for the perfection</h4>
                         <div class="block-blog-info">
-                            <p>By<a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
+                            <p>By <a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
                         </div>
                         <p class="block-blog__desc">Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
                     </div>
@@ -248,7 +261,7 @@
                         <div class="block-blog-img"><img src="../img/blog3.jpg" alt=""></div>
                         <h4>Knowing the difference is important</h4>
                         <div class="block-blog-info">
-                            <p>By<a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
+                            <p>By <a href="">Emma Anderson</a></p><span>-</span><a href="">June 20, 2018</a>
                         </div>
                         <p class="block-blog__desc">Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
                     </div>
@@ -315,6 +328,10 @@
                     dots: true,
                     arrows: false,
                 });
+            });
+            $("#nextContents").click(function(){
+                $("#nextContentsList").fadeIn();
+                $("#nextContents").hide();
             });
 		</script>
 	</body>
